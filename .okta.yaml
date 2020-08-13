@@ -2,5 +2,4 @@ oauthClient:
   redirectUris:
     - http://localhost:8080/login/oauth2/code/okta
   applicationType: web
-appConfig:
-  file: src/main/resources/application.properties
+appConfig: src/main/resources/application.properties
