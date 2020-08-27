@@ -6,5 +6,4 @@ appConfig: src/main/resources/application.properties
 
 directions: |
   Run this application with:
-
-  ./mvnw spring-boot:run
+      ./mvnw spring-boot:run
