@@ -3,3 +3,8 @@ oauthClient:
     - http://localhost:8080/login/oauth2/code/okta
   applicationType: web
 appConfig: src/main/resources/application.properties
+
+directions: |
+  Run this application with:
+
+  ./mvnw spring-boot:run
