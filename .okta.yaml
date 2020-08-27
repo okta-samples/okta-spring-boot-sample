@@ -4,6 +4,6 @@ oauthClient:
   applicationType: web
 appConfig: src/main/resources/application.properties
 
-directions: |
+directions: |+2
   Run this application with:
       ./mvnw spring-boot:run
