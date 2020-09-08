@@ -2,8 +2,10 @@ oauthClient:
   redirectUris:
     - http://localhost:8080/login/oauth2/code/okta
   applicationType: web
-appConfig: src/main/resources/application.properties
 
 directions: |+2
+  Configuration written to: src/main/resources/application.properties
+  Don't EVER commit src/main/resources/application.properties into source control
+
   Run this application with:
       ./mvnw spring-boot:run
