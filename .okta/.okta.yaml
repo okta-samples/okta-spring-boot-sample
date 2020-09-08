@@ -4,7 +4,7 @@ oauthClient:
   applicationType: web
 
 directions: |+2
-  Configuration written to: src/main/resources/application.properties
+  Okta configuration written to: src/main/resources/application.properties
   Don't EVER commit src/main/resources/application.properties into source control
 
   Run this application with:
