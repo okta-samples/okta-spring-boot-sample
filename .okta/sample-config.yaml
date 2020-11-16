@@ -8,4 +8,5 @@ directions: |+2
   Don't EVER commit src/main/resources/application.properties into source control
 
   Run this application with:
-      ./mvnw spring-boot:run
+
+      mvn spring-boot:run
