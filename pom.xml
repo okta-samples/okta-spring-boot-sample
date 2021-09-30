@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>otka-spring-boot-sample</artifactId>
+    <artifactId>okta-spring-boot-sample</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>Sample Spring Boot Project with Okta</description>
