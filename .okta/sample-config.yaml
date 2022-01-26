@@ -4,8 +4,9 @@ oauthClient:
   applicationType: web
 
 directions: |+2
-  Okta configuration written to: src/main/resources/application.properties
-  Don't EVER commit src/main/resources/application.properties into source control
+  Okta configuration written to .okta.env.
+
+  Add this file to .gitignore!
 
   Run this application with:
 
