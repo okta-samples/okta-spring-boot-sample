@@ -12,7 +12,9 @@ Before running this sample, you will need the following:
 
 ## Get the Code
 
-Grab and configure this project using `okta start spring-boot`
+Grab and configure this project using `okta start spring-boot`.
+
+> **NOTE**: If you'd like to use WebFlux instead of Spring MVC, use `okta start spring-boot --branch webflux`.
 
 ## Run the Example
 
