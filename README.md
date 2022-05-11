@@ -14,11 +14,11 @@ Before running this sample, you will need the following:
 
 ## Get the Code
 
-Grab and configure this project using `okta start spring-boot`.
+Grab and configure this project using `okta start spring-boot --branch webflux`.
 
-> **NOTE**: If you'd like to use WebFlux instead of Spring MVC, use `okta start spring-boot --branch webflux`.
+> **NOTE**: If you'd like to use Spring MVC instead of WebFlux, use `okta start spring-boot`.
 
-You can also clone this repo and run `okta start` in it.
+You can also clone this branch and run `okta start` in it.
 
 ```bash
 git clone -b webflux https://github.com/okta-samples/okta-spring-boot-sample.git
