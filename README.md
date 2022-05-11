@@ -19,7 +19,7 @@ Grab and configure this project using `okta start spring-boot`.
 You can also clone this repo and run `okta start` in it.
 
 ```bash
-git clone https://github.com/okta-samples/okta-spring-boot-sample.git
+git clone -b webflux https://github.com/okta-samples/okta-spring-boot-sample.git
 cd okta-spring-boot-sample
 okta start
 ```
@@ -46,8 +46,8 @@ First, you'll need to generate an access token.
 
     1. Fill in your client ID 
     2. Use `https://{yourOktaDomain}/oauth2/default/v1/authorize` for the Authorize URI
-    3. Select **code** for the response type and **Use PKCE**.
-    4. Click **Send Request** to continue.
+    3. Select **code** for the response type and **Use PKCE**
+    4. Click **Send Request** to continue
 
 4. Set the access token as a `TOKEN` environment variable in a terminal window.
 
