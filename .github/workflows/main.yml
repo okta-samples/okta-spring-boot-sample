@@ -2,9 +2,9 @@ name: Spring Boot CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ webflux ]
   pull_request:
-    branches: [ main ]
+    branches: [ webflux ]
 
 jobs:
   build:
@@ -28,3 +28,7 @@ jobs:
           java-package: jdk
       - name: Build and test
         run: mvn -B -ntp verify
+        env:
+          SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OKTA_ISSUER_URI: foo
+          SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OKTA_CLIENT_ID: bar
+          SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OKTA_CLIENT_SECRET: baz

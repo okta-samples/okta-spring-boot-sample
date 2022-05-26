@@ -1,6 +1,6 @@
-# Okta Spring Boot Sample
+# Okta Spring Boot WebFlux Sample
 
-This example shows you how to use the [Okta Spring Boot Starter][] to login a user. The login is achieved through the [Authorization Code Flow][] where the user is redirected to the Okta-Hosted login page.  After the user authenticates, they are redirected back to the application and a local cookie session is created.
+This example shows you how to use the [Okta Spring Boot Starter][] to login a user. The login is achieved through the [Authorization Code Flow][] where the user is redirected to the Okta-Hosted login page. After the user authenticates, they are redirected back to the application and a local cookie session is created.
 
 It also shows how to return the user's information from an API using an OAuth 2.0 access token.
 
@@ -14,11 +14,9 @@ Before running this sample, you will need the following:
 
 ## Get the Code
 
-Grab and configure this project using `okta start spring-boot --branch webflux`.
+Grab and configure this project using `okta start spring-boot -b webflux`.
 
-> **NOTE**: If you'd like to use Spring MVC instead of WebFlux, use `okta start spring-boot`.
-
-You can also clone this branch and run `okta start` in it.
+You can also clone this repo and run `okta start` in it.
 
 ```bash
 git clone -b webflux https://github.com/okta-samples/okta-spring-boot-sample.git
@@ -32,7 +30,7 @@ okta start
 ./mvnw spring-boot:run
 ```
 
-Log in at `http://localhost:8080`. 
+Log in at `http://localhost:8080`.
 
 ## API Access with OAuth 2.0
 
