@@ -26,7 +26,6 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
           java-package: jdk
-          file_name: .okta.env
       - name: Build and test
         run: mvn -B -ntp verify
         env:
