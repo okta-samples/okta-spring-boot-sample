@@ -14,7 +14,7 @@ Before running this sample, you will need the following:
 
 ## Get the Code
 
-Grab and configure this project using `okta start spring-boot -b webflux`
+Grab and configure this project using `okta start spring-boot -b webflux`.
 
 You can also clone this repo and run `okta start` in it.
 
