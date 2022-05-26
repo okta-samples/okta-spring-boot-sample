@@ -28,7 +28,3 @@ jobs:
           java-package: jdk
       - name: Build and test
         run: mvn -B -ntp verify
-        env:
-          ISSUER: foo
-          CLIENT_ID: bar
-          CLIENT_SECRET: baz
