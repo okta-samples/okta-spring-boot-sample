@@ -2,9 +2,9 @@ name: Spring Boot CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ webflux ]
   pull_request:
-    branches: [ main ]
+    branches: [ webflux ]
 
 jobs:
   build:
