@@ -29,15 +29,15 @@ public class Application {
 
     /**
      * The default Spring logout behavior redirects a user back to {code}/login?logout{code}, so you will likely want
-     * to change that.  The easiest way to do this is by creating a {@link SecurityFilterChain}.
+     * to change that. The easiest way to do this is by creating a {@link SecurityFilterChain}.
      */
     @Configuration
     static class SecurityConfig {
         @Bean
         protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
             return http.authorizeHttpRequests()
-                    // allow antonymous access to the root page
-                    .antMatchers("/").permitAll()
+                    // allow anonymous access to the root page
+                    .requestMatchers("/").permitAll()
                     // all other requests
                     .anyRequest().authenticated()
 
