@@ -2,12 +2,14 @@ package com.example.sample;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.client.oidc.web.logout.OidcClientInitiatedLogoutSuccessHandler;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
+@EnableMethodSecurity(securedEnabled = true)
 public class SecurityConfiguration {
 
     private final ClientRegistrationRepository clientRegistrationRepository;
@@ -34,7 +36,7 @@ public class SecurityConfiguration {
         // enable OAuth2/OIDC
         http.oauth2Login();
         http.oauth2ResourceServer().jwt();
-        
+
         return http.build();
     }
 }
