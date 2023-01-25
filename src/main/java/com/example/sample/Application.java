@@ -1,5 +1,6 @@
 package com.example.sample;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +10,8 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.client.oidc.web.logout.OidcClientInitiatedLogoutSuccessHandler;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.stereotype.Controller;
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.net.URI;
 import java.security.Principal;
 import java.util.Collections;
 
@@ -25,30 +29,6 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-    }
-
-    /**
-     * The default Spring logout behavior redirects a user back to {code}/login?logout{code}, so you will likely want
-     * to change that. The easiest way to do this is by creating a {@link SecurityFilterChain}.
-     */
-    @Configuration
-    static class SecurityConfig {
-        @Bean
-        protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
-            return http.authorizeHttpRequests()
-                    // allow anonymous access to the root page
-                    .requestMatchers("/").permitAll()
-                    // all other requests
-                    .anyRequest().authenticated()
-
-                // set logout URL
-                .and().logout().logoutSuccessUrl("/")
-
-                // enable OAuth2/OIDC
-                .and().oauth2Login()
-                .and().oauth2ResourceServer().jwt()
-                .and().and().build();
-        }
     }
 
     /**
