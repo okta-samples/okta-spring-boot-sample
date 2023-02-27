@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
-import org.springframework.security.oauth2.core.oidc.user.OidcUser;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,8 +43,8 @@ public class Application {
     static class ExampleRestController {
 
         @GetMapping("/hello")
-        String sayHello(@AuthenticationPrincipal OidcUser oidcUser) {
-            return "Hello: " + oidcUser.getFullName();
+        String sayHello(@AuthenticationPrincipal Jwt jwt) {
+            return String.format("Hello, %s!", jwt.getSubject());
         }
     }
 }
