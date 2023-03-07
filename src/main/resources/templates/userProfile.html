@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Details</title>
+  <!--/*/ <th:block th:insert="~{head :: head}"/> /*/-->
+</head>
+<body id="samples">
+<div th:replace="~{menu :: menu}"></div>
+
+<div id="content" class="container">
+
+  <div>
+    <h2>My Profile</h2>
+    <p>Hello, <span th:text="${#authentication.principal.attributes['name']}">Joe Coder</span>. Below is the information
+      that was read with your <a href="https://developer.okta.com/docs/api/resources/oidc.html#get-user-information">Access
+        Token</a>.
+    </p>
+    <p>This route is protected with the annotation <code>@PreAuthorize("hasAuthority('SCOPE_profile')")</code>, which
+      will ensure that this page cannot be accessed until you have authenticated, and have the scope
+      <code>profile</code>.</p>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Claim</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item : ${details}">
+      <td th:text="${item.key}">Key</td>
+      <td th:id="${'claim-' + item.key}" th:text="${item.value}">Value</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
