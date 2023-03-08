@@ -14,6 +14,8 @@ import org.springframework.security.oauth2.jwt.ReactiveJwtDecoders;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.security.web.server.authentication.logout.ServerLogoutSuccessHandler;
 
+import static org.springframework.security.config.Customizer.withDefaults;
+
 @Configuration
 @EnableReactiveMethodSecurity
 public class SecurityConfiguration {
@@ -23,8 +25,9 @@ public class SecurityConfiguration {
         return http
             .authorizeExchange((authz) ->
                 authz.pathMatchers("/").permitAll()
-                    .and().anonymous()
-                    .and().authorizeExchange().anyExchange().authenticated())
+                    .anyExchange().authenticated()
+            )
+            .anonymous(withDefaults())
             .oauth2Login(oAuth2LoginSpec -> {
                 // Enable PKCE support
                 DefaultServerOAuth2AuthorizationRequestResolver resolver = new DefaultServerOAuth2AuthorizationRequestResolver(clientRegistrationRepository);
