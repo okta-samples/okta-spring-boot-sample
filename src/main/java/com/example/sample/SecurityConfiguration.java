@@ -34,8 +34,8 @@ public class SecurityConfiguration {
             .anyRequest().authenticated());
         http.logout((logout) -> logout.logoutSuccessHandler(oidcLogoutSuccessHandler()));
         // enable OAuth2/OIDC
-        http.oauth2Login();
-        http.oauth2ResourceServer().jwt();
+        http.oauth2Login(Customizer.withDefaults());
+        http.oauth2ResourceServer(server -> server.jwt(Customizer.withDefaults()));
 
         return http.build();
     }
