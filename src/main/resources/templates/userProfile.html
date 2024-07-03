@@ -14,9 +14,10 @@
       that was read with your <a href="https://developer.okta.com/docs/api/resources/oidc.html#get-user-information">Access
         Token</a>.
     </p>
-    <p>This route is protected with the annotation <code>@PreAuthorize("hasAuthority('SCOPE_profile')")</code>, which
-      will ensure that this page cannot be accessed until you have authenticated, and have the scope
-      <code>profile</code>.</p>
+    <p>This route is protected with the annotation
+      <code>@PreAuthorize(hasAuthority('SCOPE_profile') && hasAuthority('SCOPE_offline_access'))</code>, which
+      will ensure that this page cannot be accessed until you have authenticated, and have the <code>profile</code>
+      and <code>offline_access</code> scopes.</p>
   </div>
 
   <table class="table table-striped">

@@ -33,7 +33,7 @@ public class Application {
         }
 
         @GetMapping("/profile")
-        @PreAuthorize("hasAuthority('SCOPE_profile')")
+        @PreAuthorize("hasAuthority('SCOPE_profile') && hasAuthority('SCOPE_offline_access')")
         ModelAndView userDetails(OAuth2AuthenticationToken authentication) {
             return new ModelAndView("userProfile", Collections.singletonMap("details", authentication.getPrincipal().getAttributes()));
         }
