@@ -50,7 +50,7 @@ First, you'll need to generate an access token.
 
 3. Navigate to the [OpenID Connect Debugger website](https://oidcdebugger.com/).
 
-    1. Fill in your client ID
+    1. Fill in your client ID 
     2. Use `https://{yourOktaDomain}/oauth2/default/v1/authorize` for the Authorize URI
     3. Select **code** for the response type and **Use PKCE**
     4. Click **Send Request** to continue
