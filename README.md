@@ -24,6 +24,10 @@ cd okta-spring-boot-sample
 okta start
 ```
 
+## Enable Refresh Token
+
+Manually enable Refresh Token on your Okta application to avoid third-party cookies. Sign in to your Okta Developer Edition account. Press the **Admin Console** button to navigate to the Okta Admin Console. In the sidenav, navigate to **Applications** > **Applications** and find the Okta application for this project named `okta-spring-boot-sample`. Edit the application's **General Setting** to enable the **Refresh Token** checkbox. **Save** your changes.
+
 ## Run the Example
 
 ```bash
