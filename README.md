@@ -23,34 +23,29 @@ Before running this sample, you will need the following:
 7. In the **Controlled access** section, select the appropriate access level
 8. Click **Save**
 
-### Where are my new app's credentials?
-
 Creating an OIDC Web App manually in the Admin Console configures your Okta Org with the application settings. You may also need to configure trusted origins for `http://localhost:8080` in **Security > API > Trusted Origins**.
+
+## Get the Code
+
+```bash
+git clone https://github.com/okta-samples/okta-spring-boot-sample.git
+cd okta-spring-boot-sample
+```
+
+Update your config file at `.okta.env` with the values from your application's configuration:
+
+```text
+ISSUER=https://dev-133337.okta.com
+CLIENT_ID=0oab8eb55Kb9jdMIr5d6
+CLIENT_SECRET=NEVER-SHOW-SECRETS
+```
+
+### Where are my new app's credentials?
 
 After creating the app, you can find the configuration details on the app’s **General** tab:
 - **Client ID:** Found in the **Client Credentials** section
 - **Client Secret:** Click **Show** in the **Client Credentials** section to reveal
 - **Issuer:** Found in the **Issuer URI** field for the authorization server that appears by selecting **Security > API** from the navigation pane.
-
-```text
-okta.oauth2.issuer=https://dev-133337.okta.com
-okta.oauth2.client-id=0oab8eb55Kb9jdMIr5d6
-okta.oauth2.client-secret=NEVER-SHOW-SECRETS
-```
-
-## Get the Code
-
-Grab and configure this project using `okta start spring-boot`.
-
-> **NOTE**: If you'd like to use WebFlux instead of Spring MVC, use `okta start spring-boot --branch webflux`.
-
-You can also clone this repo and run `okta start` in it.
-
-```bash
-git clone https://github.com/okta-samples/okta-spring-boot-sample.git
-cd okta-spring-boot-sample
-okta start
-```
 
 ## Enable Refresh Token
 
