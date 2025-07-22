@@ -14,14 +14,14 @@ Before running this sample, you will need the following:
 1. Go to **Applications > Applications**
 2. Click **Create App Integration**
 3. Select **OIDC - OpenID Connect** as the sign-in method
-4. Select **Single-Page Application** as the application type, then click **Next**
+4. Select **Web Application** as the application type, then click **Next**
 5. Enter an app integration name
-6. In the **Grant type** section, ensure both **Authorization Code** and **Refresh Token** are selected
-7. Configure the redirect URIs:
-- **Sign-in redirect URIs:** `http://localhost:8080/login/oauth2/code/okta`
-- **Sign-out redirect URIs:** `http://localhost:8080`
-8. In the **Controlled access** section, select the appropriate access level
-9. Click **Save**
+6. Configure the redirect URIs:
+  - Accept the default redirect URI values:
+  - **Sign-in redirect URIs:** `http://localhost:8080/login/oauth2/code/okta`
+  - **Sign-out redirect URIs:** `http://localhost:8080`
+7. In the **Controlled access** section, select the appropriate access level
+8. Click **Save**
 
 ### Where are my new app's credentials?
 
