@@ -25,7 +25,7 @@ Before running this sample, you will need the following:
 
 ### Where are my new app's credentials?
 
-Creating an OIDC Single-Page App manually in the Admin Console configures your Okta Org with the application settings. You may also need to configure trusted origins for `http://localhost:3000` in **Security > API > Trusted Origins**.
+Creating an OIDC Web App manually in the Admin Console configures your Okta Org with the application settings. You may also need to configure trusted origins for `http://localhost:8080` in **Security > API > Trusted Origins**.
 
 After creating the app, you can find the configuration details on the app’s **General** tab:
 - **Client ID:** Found in the **Client Credentials** section
